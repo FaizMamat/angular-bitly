@@ -1,9 +1,23 @@
-<h3>Bitly - shorten your url</h3>
+<nav class="navbar navbar-dark bg-primary">
+   <span class="navbar-text" style= " font:bolder; font-size: 25px; color: black">
+      Welcome to Netlify Heroku URL Shorten App
+    </span>
+  </nav>
+<div style= "padding-left:5%;margin-top:5%">Enter Your URL :
+<input type="text" [formControl]="urlEnter" placeholder="Enter your URL"
+ autocomplete="off" style= "width:50%"/>
+</div>
+&nbsp;
+<div style= "padding-left:30%">
+<button (click)="onClick()" class="btn btn-primary">Submit</button>
+&nbsp;
+<button (click)="onClickReset()" class="btn btn-success">Reset</button>
+</div>
+<div style= "padding-left:5%;margin-top:3%">
+<div>Shorten :
+<input type="text" [formControl]="UrlShow" placeholder="Short URL" style= "width:50%"/>
+</div>
+<!-- <button onclick="myFunction()">Copy text</button> -->
+</div>
 
-Input your Long Url: 
-<input type="text" [formControl]="urlInput" />
-<!-- <input type="submit" value="Send" /> -->
-<button (click)="onClick()" class="btn btn-outline-primary">Submit</button>
-<button (click)="onClickReset()" class="btn btn-outline-warning">Reset</button>
 
-<div [hidden]="urlvalue">Submitted url: {{urlvalue}}</div>
